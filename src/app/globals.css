@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #08090c;
+  --bg-alt: #0c0e13;
+  --card: #111319;
+  --line: #1f232c;
+  --line-soft: #16191f;
+  --accent: #4ade80;
+  --accent-2: #38bdf8;
+  --amber: #fbbf24;
+  --text: #f2f4f7;
+  --text-sec: #7d8797;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-amber: var(--amber);
+  --color-text: var(--text);
+  --color-text-sec: var(--text-sec);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: var(--bg); color: var(--text); }
+
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #2a2f3a; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.028) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.glow {
+  background: radial-gradient(circle at 50% 50%, rgba(74,222,128,.13), transparent 65%);
+}
