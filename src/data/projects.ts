@@ -55,26 +55,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "kids-quiz-ia",
-    title: "Kids Quiz IA — Computer Vision for Children's Education",
-    client: "Projet personnel — déployé en production",
-    category: "ai",
-    summary:
-      "Jeu web éducatif où l'enfant devine l'objet qu'un modèle de vision par ordinateur reconnaît.",
-    description: [
-      "Vision par ordinateur appliquée à un vrai produit plutôt qu'à un notebook : un jeu où l'enfant nomme l'objet affiché, avec vies, chronomètre, séries et power-ups.",
-      "Choix du dataset Caltech-101 (102 catégories d'objets du quotidien, proches du vocabulaire d'un enfant) et de MobileNetV2 pour son faible coût d'inférence, ce qui rend possible un déploiement CPU sur un plan gratuit.",
-      "Transfer learning avec backbone gelé : 88,7% d'accuracy en validation en n'entraînant que 130K paramètres, soit 3,7% du réseau.",
-      "API REST FastAPI servant aussi le frontend, chargement paresseux du modèle pour un démarrage instantané, déploiement continu déclenché depuis GitHub.",
-    ],
-    tags: ["PyTorch", "MobileNetV2", "Transfer Learning", "FastAPI", "Docker", "Render"],
-    confidential: false,
-    repoUrl: "https://github.com/badisAM/bedis-kids-quizz",
-    liveUrl: "https://bedis-kids-quizz.onrender.com",
-    // thumb: "/images/projects/kidsquiz/logo.png",
-    // images: [{ src: "/images/projects/kidsquiz/game.png", caption: "Interface du jeu" }],
-  },
-  {
     slug: "eduvision",
     title: "EduVision — Deep Learning Image Captioning",
     client: "Projet personnel",
@@ -88,8 +68,7 @@ export const projects: Project[] = [
     ],
     tags: ["PyTorch", "ResNet-50", "Transformer", "Beam Search", "Flask", "React"],
     confidential: false,
-    // TODO : remplacer par l'URL réelle du repo
-    repoUrl: "https://github.com/badisAM/eduvision",
+    repoUrl: "https://github.com/badisAM/bedis-kids-quizz",
     liveUrl: "https://bedis-kids-quizz.onrender.com",
     thumb: "/images/projects/EduVision/dl_logo.png",
     thumbPlate: true,
