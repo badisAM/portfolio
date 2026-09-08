@@ -75,11 +75,54 @@ export default function Home() {
               </TerminalWindow>
             </Reveal>
             <Reveal delay={0.12}>
-              <div className="rounded-xl border border-line bg-card p-6">
-                <div className="mb-4 font-mono text-[12px] text-text-sec">
-                  $ git log --stat contributions
+              <div className="flex flex-col gap-6">
+                <div className="rounded-xl border border-line bg-card p-6">
+                  <div className="mb-4 font-mono text-[12px] text-text-sec">
+                    $ git log --stat contributions
+                  </div>
+                  <ContributionGraph username="badisAM" />
                 </div>
-                <ContributionGraph username="badisAM" />
+
+                <div className="group relative overflow-hidden rounded-xl border border-line bg-gradient-to-b from-card to-bg p-4 transition-colors hover:border-accent/40">
+                  {/* halo diffus + quadrillage discret derrière le modèle */}
+                  <div className="grid-bg pointer-events-none absolute inset-0 opacity-50" />
+                  <div
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                      background:
+                        "radial-gradient(60% 55% at 50% 45%, rgba(74,222,128,.16), rgba(56,189,248,.07) 45%, transparent 75%)",
+                    }}
+                  />
+                  {/* liseré lumineux en haut */}
+                  <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
+
+                  <div className="relative">
+                    <ModelViewer
+                      url="/models/employee.glb"
+                      className="h-[320px] w-full"
+                      speed={0.3}
+                    />
+                  </div>
+                  <p className="relative mt-1 text-center font-mono text-[10.5px] text-text-sec">
+                    <a
+                      href="https://poly.pizza/m/3w4Bgw7Phn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent"
+                    >
+                      Man
+                    </a>{" "}
+                    by{" "}
+                    <a
+                      href="https://poly.pizza/u/Polygonal%20Mind"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent"
+                    >
+                      Polygonal Mind
+                    </a>
+                  </p>
+                </div>
               </div>
             </Reveal>
           </div>
