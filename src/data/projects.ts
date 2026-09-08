@@ -10,6 +10,7 @@ export type Project = {
   repoUrl?: string;
   liveUrl?: string;
   thumb?: string;
+  thumbPlate?: boolean; // true = plaque claire derrière la vignette (logo sombre)
   images?: { src: string; caption: string }[];
   hasImpact?: boolean; // only true for projects with real, verifiable metrics
 };
@@ -54,18 +55,50 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "kids-quiz-ia",
+    title: "Kids Quiz IA — Computer Vision for Children's Education",
+    client: "Projet personnel — déployé en production",
+    category: "ai",
+    summary:
+      "Jeu web éducatif où l'enfant devine l'objet qu'un modèle de vision par ordinateur reconnaît.",
+    description: [
+      "Vision par ordinateur appliquée à un vrai produit plutôt qu'à un notebook : un jeu où l'enfant nomme l'objet affiché, avec vies, chronomètre, séries et power-ups.",
+      "Choix du dataset Caltech-101 (102 catégories d'objets du quotidien, proches du vocabulaire d'un enfant) et de MobileNetV2 pour son faible coût d'inférence, ce qui rend possible un déploiement CPU sur un plan gratuit.",
+      "Transfer learning avec backbone gelé : 88,7% d'accuracy en validation en n'entraînant que 130K paramètres, soit 3,7% du réseau.",
+      "API REST FastAPI servant aussi le frontend, chargement paresseux du modèle pour un démarrage instantané, déploiement continu déclenché depuis GitHub.",
+    ],
+    tags: ["PyTorch", "MobileNetV2", "Transfer Learning", "FastAPI", "Docker", "Render"],
+    confidential: false,
+    repoUrl: "https://github.com/badisAM/bedis-kids-quizz",
+    liveUrl: "https://bedis-kids-quizz.onrender.com",
+    // thumb: "/images/projects/kidsquiz/logo.png",
+    // images: [{ src: "/images/projects/kidsquiz/game.png", caption: "Interface du jeu" }],
+  },
+  {
     slug: "eduvision",
-    title: "EduVision — Image Captioning",
+    title: "EduVision — Deep Learning Image Captioning",
     client: "Projet personnel",
     category: "ai",
     summary:
-      "Génération automatique de légendes d'images combinant vision par ordinateur et génération de texte.",
+      "Modèle encodeur-décodeur qui génère automatiquement une légende décrivant le contenu d'une image.",
     description: [
-      "Encodeur CNN (ResNet-50) couplé à un décodeur Transformer.",
-      "Décodage par beam search pour améliorer la qualité des légendes générées (score BLEU).",
+      "Architecture encodeur-décodeur : un CNN ResNet-50 pré-entraîné extrait les caractéristiques visuelles de l'image, un décodeur Transformer génère ensuite la légende mot à mot.",
+      "Décodage par beam search plutôt que glouton : le modèle explore plusieurs séquences candidates en parallèle et retient la plus probable, ce qui améliore nettement la qualité des légendes et le score BLEU.",
+      "Servi par une API Flask et consommé par une interface React permettant d'uploader une image et d'obtenir sa description générée.",
     ],
-    tags: ["PyTorch", "ResNet-50", "Transformer", "Flask", "React"],
+    tags: ["PyTorch", "ResNet-50", "Transformer", "Beam Search", "Flask", "React"],
     confidential: false,
+    // TODO : remplacer par l'URL réelle du repo
+    repoUrl: "https://github.com/badisAM/eduvision",
+    liveUrl: "https://bedis-kids-quizz.onrender.com",
+    thumb: "/images/projects/EduVision/dl_logo.png",
+    thumbPlate: true,
+    images: [
+      { src: "/images/projects/EduVision/demo.png", caption: "Interface de génération de légende" },
+      { src: "/images/projects/EduVision/detail1.png", caption: "Architecture du modèle" },
+      { src: "/images/projects/EduVision/detail2.png", caption: "Entraînement et métriques" },
+      { src: "/images/projects/EduVision/detail3.png", caption: "Exemples de résultats" },
+    ],
   },
   {
     slug: "vital-lab-agentic-ai",

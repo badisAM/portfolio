@@ -18,10 +18,26 @@ export default function ProjectsDeck() {
 
   const cards = visible.map((p) => (
     <Link key={p.slug} href={`/projects/${p.slug}`} className="flex h-full flex-col">
-      <div className="flex h-[150px] items-center justify-center overflow-hidden border-b border-line bg-bg-alt p-4">
+      <div
+        className={`relative flex h-[150px] items-center justify-center overflow-hidden border-b border-line p-4 ${
+          p.thumbPlate ? "bg-white" : "bg-bg-alt"
+        }`}
+      >
         {p.thumb ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={p.thumb} alt={p.title} className="max-h-full max-w-full object-contain" />
+          <>
+            {/* logo clair sur fond sombre : halo doux. Logo sombre : plaque blanche (thumbPlate). */}
+            {!p.thumbPlate && (
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(circle at 50% 50%, rgba(255,255,255,.13), rgba(74,222,128,.06) 45%, transparent 72%)",
+                }}
+              />
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={p.thumb} alt={p.title} className="relative max-h-full max-w-full object-contain" />
+          </>
         ) : (
           <span className="font-mono text-xs text-text-sec">{p.tags[0]}</span>
         )}

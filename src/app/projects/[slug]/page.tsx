@@ -97,6 +97,24 @@ export default async function ProjectPage({
         </>
       )}
 
+      {project.slug === "kids-quiz-ia" && (
+        <>
+          <h2 className="mt-12 mb-5 font-display text-lg font-semibold">Performance du modèle</h2>
+          <MetricBars
+            metrics={[
+              { label: "Accuracy", value: 88.7 },
+              { label: "Epoch 1", value: 86.0 },
+              { label: "Epoch 2", value: 87.6 },
+              { label: "Epoch 3", value: 88.7 },
+            ]}
+          />
+          <p className="mt-4 text-sm text-text-sec">
+            Caltech-101 · 102 classes · 7 316 images d&apos;entraînement, 1 828 de validation ·
+            130K paramètres entraînés sur 3,5M.
+          </p>
+        </>
+      )}
+
       {project.slug === "retrack" && (
         <>
           <h2 className="mt-12 mb-5 font-display text-lg font-semibold">Gain de temps</h2>
