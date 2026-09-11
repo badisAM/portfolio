@@ -121,7 +121,7 @@ export const projects: Project[] = [
 ],
     tags: ["Angular", "Symfony", "PHP", "Doctrine", "JWT"],
     confidential: false,
-    repoUrl: "COLLE_TON_LIEN_REPO_ICI",
+    repoUrl: "https://github.com/badisAM/CertifPro",
     liveUrl: "https://certifpro.wuaze.com/",
     thumb: "/images/projects/digital-certificate-platform/cetrificate_logo.png",
     thumbPlate: true,
