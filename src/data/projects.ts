@@ -115,11 +115,19 @@ export const projects: Project[] = [
     summary:
       "Application full-stack avec authentification, workflows d'approbation et génération automatisée de certificats.",
     description: [
-      "Architecture MVC avec Symfony et Doctrine, authentification JWT.",
-      "Frontend Angular avec workflows d'approbation multi-étapes.",
-    ],
+  "Architecture MVC avec Symfony et Doctrine (ORM), authentification sécurisée par JWT et gestion fine des rôles (demandeur, valideur, administrateur).",
+  "Workflow d'approbation multi-étapes côté Angular (soumission → validation → génération), avec traçabilité complète de chaque décision.",
+  "Génération automatisée des certificats au format numérique, supprimant la saisie manuelle et fiabilisant le processus de délivrance.",
+],
     tags: ["Angular", "Symfony", "PHP", "Doctrine", "JWT"],
     confidential: false,
+    repoUrl: "COLLE_TON_LIEN_REPO_ICI",
+    liveUrl: "https://certifpro.wuaze.com/",
+    thumb: "/images/projects/digital-certificate-platform/cetrificate_logo.png",
+    thumbPlate: true,
+    images: [
+      { src: "/images/projects/digital-certificate-platform/img1.png", caption: "Interface de la plateforme" },
+    ],
   },
   {
     slug: "gym-management-system",
