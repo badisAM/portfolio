@@ -115,10 +115,10 @@ export const projects: Project[] = [
     summary:
       "Application full-stack avec authentification, workflows d'approbation et génération automatisée de certificats.",
     description: [
-  "Architecture MVC avec Symfony et Doctrine (ORM), authentification sécurisée par JWT et gestion fine des rôles (demandeur, valideur, administrateur).",
-  "Workflow d'approbation multi-étapes côté Angular (soumission → validation → génération), avec traçabilité complète de chaque décision.",
-  "Génération automatisée des certificats au format numérique, supprimant la saisie manuelle et fiabilisant le processus de délivrance.",
-],
+      "Architecture MVC avec Symfony et Doctrine (ORM), authentification sécurisée par JWT et gestion fine des rôles (demandeur, valideur, administrateur).",
+      "Workflow d'approbation multi-étapes côté Angular (soumission → validation → génération), avec traçabilité complète de chaque décision.",
+      "Génération automatisée des certificats au format numérique, supprimant la saisie manuelle et fiabilisant le processus de délivrance.",
+    ],
     tags: ["Angular", "Symfony", "PHP", "Doctrine", "JWT"],
     confidential: false,
     repoUrl: "https://github.com/badisAM/CertifPro",
@@ -131,16 +131,26 @@ export const projects: Project[] = [
   },
   {
     slug: "gym-management-system",
-    title: "Gym Management System",
-    client: "Projet académique",
+    title: "FitZone — Gestion de Salle de Sport",
+    client: "Projet personnel — déployé en ligne",
     category: "web",
-    summary: "Système desktop et web avec API REST, planification et interface responsive.",
+    summary:
+      "Application web de gestion de salle de sport avec authentification, boutique de produits et réservation de terrains.",
     description: [
-      "Application desktop JavaFX connectée à une API REST Spring Boot.",
-      "Planification des séances et gestion des membres, base de données MySQL.",
+      "Espace client : inscription et connexion sécurisées, réservation de terrains en ligne, boutique de produits avec panier et suivi de l'historique des commandes.",
+      "Espace admin : tableau de bord de gestion des produits et des terrains, validation et suivi des commandes, gestion centralisée des réservations.",
+      "Développé en PHP avec base de données MySQL et sessions sécurisées ; digitalise entièrement la gestion d'une salle de sport en remplaçant les registres papier par un système unique couvrant réservations, produits et commandes.",
     ],
-    tags: ["JavaFX", "Spring Boot", "MySQL"],
+    tags: ["PHP", "MySQL", "HTML", "CSS"],
     confidential: false,
+    repoUrl: "https://github.com/badisAM/salle-de-sport-fitzone-",
+    liveUrl: "http://bedisfitzone.xo.je/",
+    thumb: "/images/projects/salle-sport/salle-sport.png",
+    images: [
+      { src: "/images/projects/salle-sport/img1.png", caption: "Page d'accueil" },
+      { src: "/images/projects/salle-sport/img11.png", caption: "Boutique et réservation" },
+      { src: "/images/projects/salle-sport/img111.png", caption: "Tableau de bord admin" },
+    ],
   },
   {
     slug: "time-series-forecasting",
