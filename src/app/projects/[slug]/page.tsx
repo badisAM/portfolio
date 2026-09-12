@@ -128,7 +128,9 @@ export default async function ProjectPage({
       {project.confidential && (
         <div className="mt-12 border-t border-line pt-6">
           <span className="text-sm text-text-sec">
-            Projet {project.client === "Collaboration recherche" ? "de recherche" : "d'entreprise"} — code source privé.
+            🔒 Projet {project.client === "Collaboration recherche" ? "de recherche" : "d'entreprise"} — code source
+            et démo non disponibles publiquement (secrets de confidentialité et de propriété intellectuelle liés au
+            travail).
           </span>
         </div>
       )}

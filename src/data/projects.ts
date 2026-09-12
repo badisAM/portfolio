@@ -30,6 +30,12 @@ export const projects: Project[] = [
     tags: ["Flask", "Angular", "Multi-Agent RAG", "BM25", "Embeddings", "JIRA/Xray API"],
     confidential: true,
     hasImpact: true,
+    thumb: "/images/projects/retrack/sagemcom.png",
+    images: [
+      { src: "/images/projects/retrack/Retrack.png", caption: "Architecture RETRACK" },
+      { src: "/images/projects/retrack/agents_v10.png", caption: "Pipeline multi-agent (8 agents)" },
+      { src: "/images/projects/retrack/uc_rapports.png", caption: "Cas d'usage — génération de rapports" },
+    ],
   },
   {
     slug: "ml-pipeline-mlops",
@@ -92,6 +98,14 @@ export const projects: Project[] = [
     ],
     tags: ["LangChain", "RAG", "Pinecone", "LLM"],
     confidential: true,
+    thumb: "/images/projects/vital-images/vital.png",
+    images: [
+      { src: "/images/projects/vital-images/1778610910904.jpg", caption: "Architecture du système multi-agent" },
+      { src: "/images/projects/vital-images/1778610913012.jpg", caption: "Pipeline de recherche vectorielle" },
+      { src: "/images/projects/vital-images/1778610912303.jpg", caption: "Interface de question-réponse" },
+      { src: "/images/projects/vital-images/1778610912147.jpg", caption: "Synthèse automatique des résultats" },
+      { src: "/images/projects/vital-images/1778610907223.jpg", caption: "Suivi des workflows de recherche" },
+    ],
   },
   {
     slug: "bi-platform",
@@ -105,7 +119,7 @@ export const projects: Project[] = [
       "Modélisation en étoile et dashboards Power BI interactifs avec drill-through.",
     ],
     tags: ["Power BI", "Talend", "SSMS", "Odoo", "Python"],
-    confidential: false,
+    confidential: true,
   },
   {
     slug: "digital-certificate-platform",
@@ -204,5 +218,5 @@ export const companies: {
   { name: "Sagemcom Software & Technologies", role: "AI & Software Engineering Intern", logo: "/images/companies/sagemcom.png" },
   { name: "Tunisie Telecom", role: "Networks & Telecom Intern", logo: "/images/companies/tunisie-telecom.png" },
   { name: "VITAL Lab", role: "Recherche — Agentic AI", logo: "/images/companies/vital.png", plate: true },
-  { name: "ESPRIT", role: "École d'ingénieurs" },
+  { name: "ESPRIT", role: "École d'ingénieurs", logo: "/images/companies/logo_esprit.png" },
 ];
