@@ -86,6 +86,30 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "empathai",
+    title: "EmpathAI — Assistant multi-agent multimodal",
+    client: "Projet personnel — déployé en production",
+    category: "ai",
+    summary:
+      "Assistant conversationnel multi-agent qui détecte l'état émotionnel via le texte et le visage, et adapte sa réponse en conséquence.",
+    description: [
+      "Orchestration multi-agent : un superviseur route chaque tour de conversation vers des agents spécialisés (sécurité, analyse émotionnelle, recherche documentaire, bien-être, réponse) et enregistre le chemin de décision.",
+      "Fusion multimodale texte + visage (DeepFace) : détecte les incohérences entre ce que l'utilisateur écrit et son expression faciale, et adapte le ton et le contenu de la réponse en conséquence.",
+      "RAG sur base de connaissances, mémoire persistante en base de données exportable pour l'évaluation, API FastAPI conteneurisée (Docker) et déployée en production sur Render.",
+    ],
+    tags: ["FastAPI", "Multi-Agent", "RAG", "DeepFace", "Groq API", "Streamlit", "Docker"],
+    confidential: false,
+    repoUrl: "https://github.com/badisAM/EmpathAI",
+    liveUrl: "https://empathai-api.onrender.com/",
+    thumb: "/images/projects/empathai/EmpathAI-logo.png",
+    images: [
+      { src: "/images/projects/empathai/img1.png", caption: "Interface conversationnelle" },
+      { src: "/images/projects/empathai/img11.png", caption: "Détection d'émotion texte + visage" },
+      { src: "/images/projects/empathai/img111.png", caption: "Architecture multi-agent" },
+      { src: "/images/projects/empathai/img1111.png", caption: "Journal des interactions et export du dataset" },
+    ],
+  },
+  {
     slug: "vital-lab-agentic-ai",
     title: "Agentic AI — VITAL Lab",
     client: "Collaboration recherche",
@@ -165,19 +189,6 @@ export const projects: Project[] = [
       { src: "/images/projects/salle-sport/img11.png", caption: "Boutique et réservation" },
       { src: "/images/projects/salle-sport/img111.png", caption: "Tableau de bord admin" },
     ],
-  },
-  {
-    slug: "time-series-forecasting",
-    title: "Time Series Forecasting",
-    client: "Projet académique",
-    category: "data",
-    summary: "Modèles de prévision avec analyse ACF/PACF et dashboards de validation.",
-    description: [
-      "Modélisation ARIMA/SARIMA/STL sur séries temporelles.",
-      "Analyse ACF/PACF pour la sélection des paramètres, dashboards de validation des prévisions.",
-    ],
-    tags: ["R", "ARIMA", "SARIMA", "STL"],
-    confidential: false,
   },
 ];
 
