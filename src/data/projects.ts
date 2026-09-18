@@ -38,6 +38,33 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "bi-portal-retail",
+    title: "BI Portal — Chaîne décisionnelle Odoo → Power BI",
+    client: "Projet de fin d'études — commerce de détail",
+    category: "data",
+    summary:
+      "Chaîne BI complète : extraction Odoo, ETL Talend, entrepôt SQL Server en étoile, rapports Power BI, puis portail web multi-rôles avec modèles prédictifs.",
+    description: [
+      "Chaîne décisionnelle de bout en bout : extraction des données de vente depuis Odoo, transformation sous Talend, chargement dans un entrepôt SQL Server modélisé en étoile (table de faits FAIT_VENTES et dimensions produit, client, date, paiement).",
+      "Trois rapports Power BI couvrant 1,20 M DT de chiffre d'affaires sur 473 483 transactions : vue générale des ventes, performance produits et analyse des encaissements.",
+      "Modèles de data mining sur les tickets de caisse : segmentation K-Means de 177 références en 4 segments, règles d'association FP-Growth (lift jusqu'à 3,13 sur le couple viennoiserie → boisson chaude) et prévision de chiffre d'affaires à 12 semaines.",
+      "Portail web PHP à trois rôles (administrateur, commercial, employé) rejouant les rapports en code plutôt que par iframe Power BI : les rapports intégrés exigent une session Microsoft Entra ID et ne s'affichent pour aucun visiteur externe. Authentification bcrypt, jetons anti-CSRF, cloisonnement par rôle, déployé sous Docker.",
+    ],
+    tags: ["Odoo", "Talend", "SQL Server", "Power BI", "K-Means", "FP-Growth", "PHP", "Docker"],
+    confidential: false,
+    hasImpact: true,
+    liveUrl: "https://bi-portal-qaxp.onrender.com",
+    repoUrl: "https://github.com/badisAM/BI_portal",
+    thumb: "/images/projects/PowerBI/powerbi_logo.png",
+    thumbPlate: true,
+    images: [
+      { src: "/images/projects/PowerBI/table_fait.png", caption: "Modèle en étoile — table de faits et dimensions" },
+      { src: "/images/projects/PowerBI/page_bi1.png", caption: "Performance produits" },
+      { src: "/images/projects/PowerBI/page_bi2.png", caption: "Vue générale sur vente" },
+      { src: "/images/projects/PowerBI/page_bi3.png", caption: "Analyse des paiements" },
+    ],
+  },
+  {
     slug: "ml-pipeline-mlops",
     title: "End-to-End MLOps Pipeline — Drug Classification",
     client: "Projet personnel — déployé en production",

@@ -5,6 +5,8 @@ import BarCompare from "@/components/BarCompare";
 import Flow from "@/components/Flow";
 import MetricBars from "@/components/MetricBars";
 import ImageDeck from "@/components/ImageDeck";
+import KpiStats from "@/components/KpiStats";
+import PipelineFlow from "@/components/PipelineFlow";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -112,6 +114,37 @@ export default async function ProjectPage({
             Caltech-101 · 102 classes · 7 316 images d&apos;entraînement, 1 828 de validation ·
             130K paramètres entraînés sur 3,5M.
           </p>
+        </>
+      )}
+
+      {project.slug === "bi-portal-retail" && (
+        <>
+          <h2 className="mt-12 mb-5 font-display text-lg font-semibold">Chiffres clés</h2>
+          <KpiStats
+            items={[
+              { value: "1,20 M", label: "CA analysé", note: "en dinars, 2022–2024" },
+              { value: "473 K", label: "Transactions", note: "toutes caisses", accent: "var(--accent-2)" },
+              { value: "177", label: "Références", note: "en 4 segments K-Means", accent: "var(--amber)" },
+              { value: "3,13", label: "Lift maximal", note: "règle d'association la plus forte" },
+            ]}
+          />
+
+          <h2 className="mt-12 mb-5 font-display text-lg font-semibold">Qualité de la chaîne</h2>
+          <MetricBars
+            metrics={[
+              { label: "Encaissements conformes", value: 99.96 },
+              { label: "Taux de recouvrement", value: 100 },
+              { label: "Part des espèces", value: 96.31 },
+              { label: "Poids du T4", value: 38.3 },
+            ]}
+          />
+          <p className="mt-4 text-sm text-text-sec">
+            180 anomalies de caisse sur 473 483 transactions · dépendance au numéraire
+            identifiée comme principal axe d&apos;amélioration.
+          </p>
+
+          <h2 className="mt-12 mb-5 font-display text-lg font-semibold">Architecture de la chaîne</h2>
+          <PipelineFlow />
         </>
       )}
 
